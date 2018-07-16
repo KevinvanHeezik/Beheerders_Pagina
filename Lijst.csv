@@ -1,0 +1,4 @@
+Id; Voornaam; Tussenvoegsel; Achternaam; Straat; Nummer; Toevoeging; Postcode; Plaats; Vooropleiding; Geboortedatum; Geslacht; Nationaliteit; Medestudent; Overig
+0912345; Jan; ; Smit; Gouden Slot; 40; A; 1111AA; Volendam; VWO; 1990-02-09; M; Nederlands; null; null
+0954321; Kees; ; Tol; Azie; 20; ; 2222BB; Amsterdam; HAVO; 1990-02-28; V; Brazilie; null; null
+0958302; Kevin; van; Heezik; Boomgaard; 50; ; 3404BH; IJsselstein; HAVO; 1998-06-04; M; Nederlands; Hans; Nice
