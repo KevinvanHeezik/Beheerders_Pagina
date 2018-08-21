@@ -24,14 +24,14 @@ public class Student {
 
     void insert(Connection conn) throws Exception {
 
-        String query = " INSERT INTO studenten (Studenten_Nummer, Voornaam, Tussenvoegsel, Achternaam, Straat, Nummer, Toevoeging, Postcode, Plaats, Vooropleiding, Geboortedatum, Geslacht, Nationaliteit, Medestudent, Overig)"
-                + " values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String query = " INSERT INTO studenten (Studenten_Nummer, Achternaam, Tussenvoegsel, Voornaam, Straat, Nummer, Toevoeging, Postcode, Plaats, Vooropleiding, Geboortedatum, Medestudent, Overig)"
+                + " values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         PreparedStatement preparedStmt = conn.prepareStatement(query);
         preparedStmt.setString(1, id);
-        preparedStmt.setString(2, voornaam);
+        preparedStmt.setString(2, achternaam);
         preparedStmt.setString(3, tussenvoegsel);
-        preparedStmt.setString(4, achternaam);
+        preparedStmt.setString(4, voornaam);
         preparedStmt.setString(5, straat);
         preparedStmt.setInt(6, nummer);
         preparedStmt.setString(7, toevoeging);
@@ -39,19 +39,17 @@ public class Student {
         preparedStmt.setString(9, plaats);
         preparedStmt.setString(10, vooropleiding);
         preparedStmt.setDate(11, geboortedatum);
-        preparedStmt.setString(12, geslacht);
-        preparedStmt.setString(13, nationaliteit);
-        preparedStmt.setString(14, medestudent);
-        preparedStmt.setString(15, overig);
+        preparedStmt.setString(12, medestudent);
+        preparedStmt.setString(13, overig);
 
         // execute the preparedstatement
         preparedStmt.execute();
 
     }
 
-    @Override
+    /*@Override
     public String toString()
     {
-      return id + COMMA + voornaam + COMMA + tussenvoegsel + COMMA + achternaam + COMMA + straat + COMMA + nummer + COMMA + toevoeging + COMMA + postcode + COMMA + plaats + COMMA + vooropleiding + COMMA + geboortedatum + COMMA + geslacht + COMMA + nationaliteit + COMMA + medestudent + COMMA + overig; 
-    }
+      return id + COMMA + achternaam + COMMA + tussenvoegsel + COMMA + voornaam + COMMA + straat + COMMA + nummer + COMMA + toevoeging + COMMA + postcode + COMMA + plaats + COMMA + vooropleiding + COMMA + geboortedatum + COMMA + medestudent + COMMA + overig; 
+    }*/
 }

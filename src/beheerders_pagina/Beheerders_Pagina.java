@@ -2,9 +2,7 @@ package beheerders_pagina;
 
 import java.sql.*;
 import java.io.*;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-//import javax.swing.JFileChooser;
 
 public class Beheerders_Pagina {
 
@@ -21,7 +19,7 @@ public class Beheerders_Pagina {
     public void CSVReader() {
 
         //final JFileChooser fc = new JFileChooser();
-        String csvFile = "C:\\Users\\kevin\\Documents\\Klassenindeling\\Test2.csv";
+        String csvFile = "C:\\Users\\kevin\\Documents\\Klassenindeling\\Geupdate lijst.csv";
         BufferedReader br = null;
         String line = "";
         String cvsSplitBy = ";";
@@ -52,21 +50,21 @@ public class Beheerders_Pagina {
                 Student student = new Student();
 
                 student.id = stud_data[0];
-                student.voornaam = stud_data[1];
+                student.voornaam = stud_data[4];
                 student.tussenvoegsel = stud_data[2];
-                student.achternaam = stud_data[3];
-                student.straat = stud_data[4];
-                student.nummer = Integer.parseInt(stud_data[5]);
-                student.toevoeging = stud_data[6];
-                student.postcode = stud_data[7];
-                student.plaats = stud_data[8];
-                student.vooropleiding = stud_data[9];
-                java.util.Date datum = new SimpleDateFormat("yyyy-MM-dd").parse(stud_data[10]);
-                student.geboortedatum = new java.sql.Date(datum.getTime());
-                student.geslacht = stud_data[11];
-                student.nationaliteit = stud_data[12];
-                student.medestudent = stud_data[13];
-                student.overig = stud_data[14];
+                student.achternaam = stud_data[1];
+                student.straat = stud_data[6];
+                student.nummer = Integer.parseInt(stud_data[7]);
+                student.toevoeging = stud_data[8];
+                student.postcode = stud_data[10];
+                student.plaats = stud_data[11];
+                //student.vooropleiding = stud_data[9];
+                //java.util.Date datum = new SimpleDateFormat("yyyy-MM-dd").parse(stud_data[10]);
+                //student.geboortedatum = new java.sql.Date(datum.getTime());
+                //student.geslacht = stud_data[11];
+                //student.nationaliteit = stud_data[12];
+                //student.medestudent = stud_data[13];
+                //student.overig = stud_data[14];
 
                 student.insert(conn);
 
